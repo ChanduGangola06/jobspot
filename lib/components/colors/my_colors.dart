@@ -9,4 +9,5 @@ class MyColors {
   static const Color cardColor = Color(0xFFFCA34D);
   static const Color buttonColor = Color(0xFFFFD6AD);
   static const Color secondaryColor = Color(0xFFAFECFE);
+  static const Color textPrimaryColor = COlor(0xFF0D0140);
 }
