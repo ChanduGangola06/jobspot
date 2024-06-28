@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jobspot/components/colors/my_colors.dart';
+import 'package:jobspot/components/textfield/custom_textfield.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -10,6 +11,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +35,29 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontSize: 12.sp,
                 color: const Color(0xFF524B6B),
               ),
+            ),
+            SizedBox(height: 30.h),
+            Text('Email'),
+            CustomTextfield(
+              controller: emailController,
+              style: TextStyle(),
+              hintText: 'Enter Email',
+              labelText: 'Enter Email',
+              hintStyle: TextStyle(),
+              labelStyle: TextStyle(),
+              fillColor: Colors.white,
+              readonly: false,
+            ),
+            Text('Password'),
+            CustomTextfield(
+              controller: passwordController,
+              style: TextStyle(),
+              hintText: 'Enter Password',
+              labelText: 'Enter Password',
+              hintStyle: TextStyle(),
+              labelStyle: TextStyle(),
+              fillColor: Colors.white,
+              readonly: false,
             ),
           ],
         ),
